@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/*la barra di navigazione*/
+header .barra{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background-color: #1a1a1a;
+    /*display: block;*/
+    display: flex;
+    flex-flow: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+
+}
+
+/*header .utente{
+    margin-top: 30%;
+}*/
+
+header .barra .bordo_immagine {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 1rem;
+    background: linear-gradient(to right, #f06, #3cf);
+  }
+  
+header .barra .bordo_immagine img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+
+header .barra .utente #nome{
+    font-size: 3rem;
+    color: #fff;
+}
+
+header .barra .utente #lavoro{
+    font-size: 2rem;
+    color: #eee;
+}
+
+header .barra .navbar{
+    width: 100%;
+
+}
+header .barra .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .barra .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .barra .navbar ul li a:hover{
+    background: linear-gradient(to right, #f06, #3cf);
+    transform: scale(1.1);
+   
+}
+#menu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+/*sezione home */
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+.home h1 span{
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.home p{
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+.bot{
+    padding:1rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+
+}
+.bot i{
+    padding: 0.5rem;
+    font-size: 1.8rem;
+
+}
+.bot:hover{
+    background: linear-gradient(to right, #f06, #3cf);
+    transform: scale(1.1);
+}
+#nameSpan::after {
+    content: "";
+    -webkit-animation: blink .5s infinite ease;
+    animation: blink .5s infinite ease;
+    position: relative;
+    border-right: 2px solid white;
+    right: -2px;
+}
+  
+  
+
+
+
+/*sezione hobby*/
+.hobby h1{
+    text-align: center;
+    margin: 0.6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+.hobby h1 span{
+    color: yellow;
+}
+
+.allineare{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.hobby .box{
+    width: 37rem;
+    background-color: #222;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.hobby .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hobby .box p{
+    margin-top:1rem ;
+    font-size: 2rem;
+    color: #fff; 
+}
+
+
+
+
+
+/*contact*/
+.contact h1{
+    text-align: center;
+    margin: 0.6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+.contact h1 span{
+    color: yellow;
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+    
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    padding-bottom: 4rem;
+
+}
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: #3333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+.contact .row form .message{
+    resize: none;
+}
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+.contact .row .content .title{
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items:  center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: yellow;
+}
+
+footer{
+    background-color: #333;
+}
+  
+footer .contati{
+    padding: 1rem 0;
+    text-align: center ;
+}
+footer .contati a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: 0.1rem solid #fff;
+    margin: 0.3rem;
+    border-radius: 50%;
+}
+  
+footer .contati a:hover{
+    background-color: rgb(206, 242, 116);
+    color: #000;
+}
+footer .creato{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+footer .creato span{
+    color: orange;
+}
+.skills h1{
+    text-align: center;
+    margin: 0.6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+.skills h1 span{
+    color: yellow;
+}
+.skills .bar span{
+    color:#12f7ff;
+}
+.skills{
+    color: #ffffff;
+}
+
+.skill-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
+}
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+.skill-left{
+    width: 40%;
+    margin-left: 7rem;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-bar .info p{
+    font-size: 1.5rem;
+
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: #250821;
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.skill-bar .bar span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #12f7ff;
+    border-radius: 25px;
+    box-shadow:0 0 .5rem #12f7ff;
+}
+
+.skill-bar .bar .html{
+    width: 90%;
+    animation: html 2s;
+}
+.skill-bar .bar .css{
+    width: 77%;
+    animation: css 3s;
+}
+.skill-bar .bar .javascript{
+    width: 50%;
+    animation: javascript 4s;
+}
+
+.skill-bar .bar .Python{
+    width: 66%;
+    animation: Python 4s;
+}
+
+.skill-bar .bar .java{
+    width: 80%;
+    animation: java 4s;
+}
+.skill-bar .bar .csharp{
+    width: 70%;
+    animation: csharp 4s;
+}
+.skill-bar .bar .cplus{
+    width: 50%;
+    animation: cplus 4s;
+}
+.skill-bar .bar.animate {
+    animation-duration: 2s; /* Durata dell'animazione */
+    animation-fill-mode: forwards; /* Mantieni lo stato finale dell'animazione */
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 77%;
+    }
+}
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes Python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 66%;
+    }
+}
+
+@keyframes java{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes csharp{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes cplus{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+
+
+
+.skill-right{
+    margin-left: 1rem; 
+    width: 40%;
+}
+.radial-bars{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    align-self: center;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stroke: #250821;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path4 1s 1s linear forwards;stroke-dasharray: 456;stroke-dashoffset: 456;}
+.path-2{animation: animate-path4 1s 1s linear forwards;stroke-dasharray: 456; stroke-dashoffset: 456;}
+.path-3{animation: animate-path3 1s 1s linear forwards;stroke-dasharray: 440;stroke-dashoffset: 420;}
+.path-4{animation: animate-path4 1s 1s linear forwards;stroke-dasharray: 519;stroke-dashoffset: 519;}
+
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path2 {
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path3 {
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path4 {
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5 1s linear forwards;
+}
+.radial-bar .text{
+    width: 100%;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 90%;
+
+}
+
+
+.Progetti h1{
+    text-align: center;
+    margin: 0.6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+.Progetti h1 span{
+    color: yellow;
+}
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding: 1rem,4rem;
+    }
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 45%;
+    }
+    header .barra{ 
+        left: -120%;
+        visibility: hidden;
+        transition: 0.5s;
+        width: 35rem;
+    }
+    header #menu{
+        display: flex;
+        cursor: pointer;
+    }
+
+   /*header .utente{
+    margin-top: 90%;
+    }*/
+    
+
+    
+    #menu:focus ~ .barra {
+        visibility: visible; 
+        left: 0;
+    }
+    #menu:focus + header li{
+        left: 0;
+        
+    }
+    body{
+        padding:0;
+    }
+    
+}
+
+
