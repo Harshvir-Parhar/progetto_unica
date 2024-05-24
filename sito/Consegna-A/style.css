@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+*{
+  font-family: 'Roboto',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+
+}
+
+html{
+  font-size: 62.5%;
+
+}
+body{
+  background-color: #000;
+  overflow-x: hidden;
+
+}
+
+
+/*logo-nav-cerca*/
+header{
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: 0.1rem solid #fff;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+}
+header .logo img{
+  height: 6rem;
+}
+header #menu{
+  display: none;
+  font-size: 2.5rem
+}
+
+header nav a{
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #fff ;
+
+}
+header nav a:hover{
+  color: yellow;
+  border-bottom: 0.2rem solid yellow;
+  padding-bottom: 0.5rem;
+}
+
+header .icone #cerca_1{
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  font-size: 2.5rem;
+}
+
+header .icone #cerca_1:hover{
+  color: yellow;
+}
+
+header .icone .form-cerca{
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+}
+
+header .icone .form-cerca input{
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #000;
+  padding: 1rem;
+  text-transform: none;
+}
+
+header .icone .form-cerca label{
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: #000;
+}
+
+header .icone .form-cerca label:hover{
+  color: yellow;
+}
+
+
+header .icone .form-cerca {
+  right: -120%;
+  visibility: hidden;
+}
+
+.search-input:checked ~ .form-cerca {
+  visibility: visible;
+  right: 1%;
+}
+.search-input {
+  display: none;
+}
+
+
+/*La parte iniziale con immagine e mappe*/
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(sito/imaggini/processi_4.png) no-repeat;
+  background-size: cover;
+  background-position: center ;
+  /*margin-top: 10rem;*/
+  margin: -2px; /*per nscondere i bordi bianchi del immagine*/
+
+}
+section{
+  padding: 2rem 7%;
+}
+.home .contenuto{
+  max-width: 60rem;
+  margin-left: 5rem;
+  
+}
+.home .contenuto h3{
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.home .contenuto p{
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  text-align: justify;
+  color: #fff;
+}
+.home .contenuto a{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: rgb(255, 157, 0);
+  cursor: pointer;
+}
+.home .contenuto a:hover{
+  scale: 1.1;
+}
+
+
+/*main*/
+
+main {
+  margin-top: 10rem;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+}
+
+main h1 {
+  color: rgb(255, 170, 0);
+  font-size: 5rem;
+}
+
+section {
+  width: 100%;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+section:nth-child(even) {
+  background-color: #121212;
+  color: white; 
+}
+
+section:nth-child(odd) {
+  background-color: #000;
+  color: white; 
+}
+
+
+.sez1 .img_contenuto {
+  width: 50rem;
+  height: auto;
+  float: left;
+  margin: 2rem;
+
+}
+
+.sez2 .img_contenuto {
+  width: 50rem;
+  height: auto;
+  float: right;
+  margin: 2rem;
+
+}
+
+
+.img_contenuto img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.testo {
+  overflow: hidden;
+  margin-top: 6rem;
+  
+}
+
+.testo h2 {
+  font-size: 3rem;
+}
+
+.testo p {
+  margin-top: 0;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-top: 2rem;
+}
+
+
+
+
+
+/*Tutte le pagine */
+
+.tutto {
+  margin-top: 6rem;
+}
+
+.sidebar {
+  width: 40rem;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  margin-top: 6rem;
+}
+
+.sidebar section {
+  width: 100%;
+  background-color: #242222;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.sidebar section img {
+  width: 100%;
+  height: 20vh;
+}
+
+.sidebar section ol {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.sidebar section ol li {
+  margin-top: 0.5rem;
+}
+
+.materiale {
+  margin-left: 40rem;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.materiale section {
+  background-color: #242222;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  width: 90%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.materiale section .img {
+  width: 100%;
+}
+
+.img img {
+  width: 100%;
+  height: 50vh;
+}
+
+.materiale section .paragrafi {
+  margin: 1.5rem;
+}
+.materiale section .paragrafi ul{
+  margin: 1rem 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.materiale section .paragrafi ul li{
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.sidebar h2,
+.materiale h2 {
+  color: #ff9800;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.sidebar p,
+.materiale p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.nav-pag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.nav-pag a {
+  background-color: transparent;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 2px solid #fff;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.nav-pag a:hover {
+  background-color: #fff;
+  color: #333;
+  transform: scale(1.3);
+}
+
+
+
+
+/*Footer*/
+footer{
+  background-color: #333;
+}
+
+footer .contati{
+  padding: 1rem 0;
+  text-align: center ;
+}
+footer .contati a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  border: 0.1rem solid #fff;
+  margin: 0.3rem;
+  border-radius: 50%;
+}
+
+footer .contati a:hover{
+  background-color: rgb(206, 242, 116);
+  color: #000;
+}
+footer .creato{
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+footer .creato span{
+  color: orange;
+}
+/*----------------------*/
+
+
+/*versione mobile*/
+
+@media (max-width:1024px) {
+  header #menu{
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  header .icone #cerca_1{
+    margin-right: 0;
+  }
+
+  header nav{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    width: 30rem;
+    height:100vh;
+  }
+
+  header nav a{
+    color: #000;
+    display: block;
+    margin: 1.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 0.1rem solid #eae1e1 ;
+    box-shadow: 0px 0px 10px rgb(10, 10, 10);;
+    
+  }
+  header nav{
+    right: -120%;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  #menu:focus ~ nav {
+    visibility: visible; 
+    right: 0;
+    
+  }
+  header .icone .form-cerca{
+    width: 90%;
+    right: 2rem;
+  }
+  section{
+    padding: 2rem;
+  }
+  .home{
+    background-image: url(sito/imaggini/mob1.png);
+  }
+
+  .home .contenuto{
+    margin:auto;
+  }
+  .home .contenuto h3{
+    font-size: 4rem;
+  }
+  .home .contenuto p{
+    text-align: justify;
+  }
+  main h1{
+    font-size: 3rem;
+  }
+
+  .sez1 .img_contenuto{
+    float: none;
+    width: 96%;
+    margin: auto;
+  }
+  .sez2 .img_contenuto{
+    float: none;
+    width: 96%;
+    margin: auto;
+  }
+  .testo h2{
+    font-size: 3rem;
+  }
+  .testo p{
+    font-size: 1.5rem;
+  }
+
+
+  /*Contenuti varie pagine*/
+
+
+
+  .sidebar {
+    width: 100%; 
+    padding: 2rem;
+    position: relative;
+    margin-top: 6rem;
+  }
+
+  .materiale {
+    margin-left: 0; 
+    padding: 2rem;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .materiale section{
+    width: 100%;
+  }
+
+  .sidebar section img {
+    height: 30vh; 
+  }
+
+  .img img {
+    height: 30vh; 
+  }
+
+
+  .sidebar section ol {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+
+  .sidebar section ol li {
+    margin-top: 1rem;
+  }
+
+  .sidebar h2,
+  .materiale h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .materiale section .paragrafi ul{
+    font-size: 1.5rem;
+  }
+
+  .sidebar p,
+  .materiale p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
+}
+
+
+@media (max-width: 500px) {
+  .home .contenuto h3 {
+    font-size: 3rem; 
+  }
+  
+  .home .contenuto p {
+    font-size: 1.5rem; 
+  }
+  .home .contenuto a{
+    padding: 2rem 2rem;
+  }
+  main h1{
+    font-size: 3rem;
+  }
+
+  .sidebar h2,
+  .materiale h2 {
+    font-size: 2rem;
+  }
+
+  .materiale section .paragrafi ul{
+
+    font-size: 1.2rem;
+  }
+
+  .sidebar p,
+  .materiale p {
+    font-size: 1.5rem;
+  }
+
+
+  .sidebar section ol {
+    font-size: 1.5rem;
+  
+  }
+
+
+}

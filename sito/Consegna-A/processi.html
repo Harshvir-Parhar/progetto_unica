@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="sito/imaggini/logo.png" alt="logo"></div>
+    <button id="menu"><i class="fas fa-bars"></i></button>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="SO.html">SO</a>
+      <a href="processi.html">processi</a>
+      <a href="scheduling.html">scheduling</a>
+    </nav>
+    
+    <div class="icone">
+      <input type="checkbox" id="cerc" class="search-input">
+      <label for="cerc" id="cerca_1" class="search-label"><i class="fas fa-search"></i></label>
+      <div class="form-cerca">
+        <input type="search" id="Cerca" placeholder="Cerca Qui">
+        <label for="Cerca" class="fas fa-search"></label>
+      </div>
+    </div>
+  </header>
+
+  <main class="tutto">
+    <div class="sidebar">
+      <section>
+        <img src="sito/imaggini/primo.jpg" alt="">
+        <p>
+          Esamineremo i concetti fondamentali legati ai processi, focalizzandoci sulla loro struttura, i diversi stati attraverso cui passano 
+          e il ciclo di vita che li caratterizza.
+        </p>
+      </section>
+      <section>
+        <h2>Processo</h2>
+        <ol>
+          <li>processo e sua attività</li>
+          <li>Componenti e dati</li>
+          <li>Collaborazione e coordinazione</li>
+          <li>Stato di un processo</li>
+        </ol>
+      </section>
+    </div>
+    <div class="materiale">
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/processo.png" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>processo e sua attività</h2>
+          <p>
+            Nella comprensione dei sistemi operativi, è fondamentale distinguere tra il concetto di programma e quello di processo. 
+            Mentre il programma è un'entità inerte, costituita da istruzioni da eseguire, il processo rappresenta un'entità attiva 
+            che evolve attraverso l'esecuzione di tali istruzioni da parte della CPU. Questa sezione esplorerà la definizione di processo 
+            e la sua attività.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/process-memory.jpg" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>Componenti e dati</h2>
+          <p>
+            Nei moderni sistemi operativi, il processo costituisce l'unità di base. Composto da codice e dati del programma, 
+            un processo si suddivide in diverse parti. Il codice, costituito dalle istruzioni, è accompagnato dai dati del programma,
+            a loro volta suddivisi in variabili globali, locali e non locali delle procedure, variabili temporanee, e variabili allocate 
+            dinamicamente.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/Collaborazione.jpg" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>Collaborazione e coordinazione</h2>
+          <p>
+            I processi possono interagire in vari modi. Alcuni possono agire in modo indipendente, evolvendo autonomamente, mentre altri necessitano 
+            di cooperare per raggiungere obiettivi comuni. Questa sezione esplorerà entrambi gli scenari, delineando come i processi possono comunicare 
+            e sincronizzarsi. Inoltre, verrà esaminato come la competizione per risorse può portare a ostacoli tra processi e compromettere le loro 
+            elaborazioni.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/stato.jpg" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>Stato di un processo</h2>
+          <p>
+            Prima di analizzare le sfide dell'interazione tra processi, è essenziale comprendere il ciclo di vita di un processo. 
+            Questa sezione illustrerà come un processo attraversa diverse fasi durante la sua esecuzione:
+          </p>
+          <ul>
+            <li><strong>Nuovo (New):</strong> In questa fase, un processo viene creato e gli viene assegnato un identificatore unico (PID). Il processo viene inserito nell'elenco dei processi pronti (RL Ready List) in attesa del suo turno di utilizzo della CPU.</li>
+            <li><strong>Esecuzione (Running):</strong> Quando al processo viene assegnata la CPU, entra nello stato di esecuzione. Durante questo periodo, la CPU esegue le istruzioni del processo. In un sistema monoprocessore, solo un processo può essere in questo stato alla volta.</li>
+            <li><strong>Attesa (Waiting):</strong> Un processo entra nello stato di attesa quando necessita di una risorsa che al momento non è disponibile. Rimane in attesa che si verifichi un evento, ad esempio, il rilascio di una risorsa. Questi processi formano la Waiting List (WL).</li>
+            <li><strong>Pronto (Ready-to-Run):</strong> Un processo diventa pronto quando dispone di tutte le risorse necessarie alla sua evoluzione, ad eccezione della CPU. È in attesa di ottenere il proprio time-slice di CPU. In questa fase, il processo è inserito nella lista dei processi pronti.</li>
+            <li><strong>Finito (Terminated):</strong> Quando tutte le istruzioni del processo sono state eseguite, entra nello stato di terminato. A questo punto, il sistema operativo rilascia le risorse che il processo aveva utilizzato.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contati">
+      <a href="" class="fab fa-facebook-f"></a>
+      <a href="" class="fab fa-twitter"></a>
+      <a href="" class="fab fa-instagram"></a>
+      <a href="" class="fas fa-envelope"></a>
+      <a href="" class="fab fa-discord"></a>
+    </div>
+    <div class="creato">© 2023 <span>Parhar Harshvir Singh</span></div>
+  </footer>
+</body>
+</html>

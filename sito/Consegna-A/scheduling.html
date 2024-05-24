@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheduling</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="sito/imaggini/logo.png" alt="logo"></div>
+    <button id="menu"><i class="fas fa-bars"></i></button>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="SO.html">SO</a>
+      <a href="processi.html">processi</a>
+      <a href="scheduling.html">scheduling</a>
+    </nav>
+    
+    <div class="icone">
+      <input type="checkbox" id="cerc" class="search-input">
+      <label for="cerc" id="cerca_1" class="search-label"><i class="fas fa-search"></i></label>
+      <div class="form-cerca">
+        <input type="search" id="Cerca" placeholder="Cerca Qui">
+        <label for="Cerca" class="fas fa-search"></label>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="tutto">
+    <div class="sidebar">
+      <section>
+        <img src="sito/imaggini/production-scheduling.webp" alt="">
+        <p>
+          Esamineremo i concetti fondamentali legati alla schedulazione dei processi.
+          analizzeremo le politiche di scheduling, i criteri di scelta e l'impatto sull'utilizzo della CPU e sulla risposta del sistema.
+        </p>
+      </section>
+      <section>
+        <h2>Processo</h2>
+        <ol>
+          <li>La Schedulazione dei Processi</li>
+          <li>Le modalità User e Kernel</li>
+          <li>I criteri di scheduling</li>
+          <li>Algoritmo di scheduling FCFS</li>
+          <li>Algoritmo di scheduling SJF</li>
+        </ol>
+      </section>
+    </div>
+
+    <div class="materiale">
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/schedulazione-processi.jpg" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>La Schedulazione dei Processi</h2>
+          <p>
+            La schedulazione dei processi è il processo attraverso il quale il sistema operativo assegna la CPU ai processi pronti. Le politiche di scheduling 
+            determinano quali processi vengono eseguiti e quando, al fine di massimizzare l'utilizzo della CPU, il throughput del sistema e ridurre i tempi di risposta.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/user-kernel.jpg" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>Le modalità User e Kernel</h2>
+          <p>
+            Durante la loro esecuzione, i processi passano da periodi di esecuzione a periodi di attesa e cambiano tra diverse modalità di esecuzione con diversi 
+            livelli di privilegio: user mode e kernel mode.
+          </p>
+          <ul>
+            <li>Il user mode è lo stato normale di esecuzione dei programmi dell'utente.</li>
+            <li>Il kernel mode, detto anche modalità supervisore, è dove eseguono i servizi del kernel. In modalità kernel, il processore viene configurato in modo che l'esecuzione non possa essere interrotta, rendendo questi processi non pre-emptive.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/CPU-Usage.webp" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>I criteri di scheduling</h2>
+          <p>
+            Le politiche di scheduling mirano a:
+          </p>
+          <ul>
+            <li>Massimizzare l'utilizzo della CPU.</li>
+            <li>Massimizzare il throughput del sistema.</li>
+            <li>Ridurre i tempi di risposta del sistema.</li>
+            <li>Minimizzare i tempi di attesa e il tempo totale di permanenza di ogni processo.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/schedulingfcfsl.jpg" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>Algoritmo di scheduling FCFS</h2>
+          <p>
+            Il primo algoritmo è l'FCFS, First-Come-First-Served (il primo arrivato è il primo servito). I processi vengono messi in coda in base all'ordine d'arrivo (FIFO). 
+            I processi pronti vengono schedulati in base a questo ordine, indipendentemente dalla loro durata prevista. Questo algoritmo è non pre-emptive, quindi i processi 
+            completano la loro esecuzione senza essere sospesi.
+            Un difetto di FCFS è che se un processo ha un lungo tempo di CPU burst, gli altri devono attendere la sua naturale terminazione, causando tempi di attesa 
+            elevati, specialmente con processi ad alta intensità di I/O (effetto convoglio).
+          </p>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="img">
+          <img src="sito/imaggini/SchedulingSJFnonpreemptive.jpg" alt="">
+        </div>
+        <div class="paragrafi">
+          <h2>Algoritmo di scheduling SJF</h2>
+          <p>
+            Per migliorare FCFS, si può utilizzare l'algoritmo SJF (Shortest Job First), che seleziona il processo più breve dalla lista dei pronti.
+            Inoltre, se un nuovo processo con tempo stimato minore arriva mentre ne è in esecuzione un altro, possono verificarsi due situazioni:
+          </p>
+          <ul>
+            <li>n modalità non pre-emptive, non si fa nulla.</li>
+            <li>In modalità pre-emptive, se il tempo rimanente del processo in esecuzione è maggiore del tempo previsto per il nuovo processo, si sospende il primo e si passa al secondo.</li>
+          </ul>
+        </div>
+      </section>
+
+
+    </div>
+
+
+
+  </main>
+  
+  <footer>
+    <div class="contati">
+      <a href="" class="fab fa-facebook-f"></a>
+      <a href="" class="fab fa-twitter"></a>
+      <a href="" class="fab fa-instagram"></a>
+      <a href="" class="fas fa-envelope"></a>
+      <a href="" class="fab fa-discord"></a>
+    </div>
+    <div class="creato">© 2023 <span>Parhar Harshvir Singh</span></div>
+  </footer>
+
+
+
+</body>
+</html>

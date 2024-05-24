@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="sito/imaggini/logo.png" alt="logo"></div>
+        <button id="menu"><i class="fas fa-bars"></i></button>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="SO.html">SO</a>
+            <a href="processi.html">processi</a>
+            <a href="scheduling.html">scheduling</a>
+        </nav>
+        
+        <div class="icone">
+            <input type="checkbox" id="cerc" class="search-input">
+            <label for="cerc" id="cerca_1" class="search-label"><i class="fas fa-search"></i></label>
+            <div class="form-cerca">
+              <input type="search" id="Cerca" placeholder="Cerca Qui">
+              <label for="Cerca" class="fas fa-search"></label>
+            </div>
+        </div>
+    </header>
+
+    <main class="tutto">
+
+        <div class="sidebar">
+            <section>
+                <img src="sito/imaggini/sistema_operativo.jpg" alt="">
+                <p>
+                    Benvenuti nella pagina dedicata al processo di avvio del PC! In questa sezione, esploreremo le fasi fondamentali che avvengono quando 
+                    accendiamo il nostro computer.
+                </p>
+                
+            </section>
+            <section>
+                <h2>Passaggi del Processo di Avvio</h2>
+                <ol>
+                    <li>Introduzione</li>
+                    <li>Caricamento del Programma di Boot</li>
+                    <li>Autodiagnosi e Test di Avvio</li>
+                    <li>Controllo delle Periferiche di Input</li>
+                    <li>Caricamento del Sistema Operativo</li>
+                    <li>Programma di Boot e BIOS</li>
+                    <li>Conclusione</li>
+                </ol>
+            </section>
+            
+        </div>
+        
+        <div class="materiale">
+            <section>
+                <div class="img">
+                    <img src="sito/imaggini/accende.webp" alt="">
+                </div>
+                <div class="paragrafi">
+                    <h2>Introduzione</h2>
+                    <p>
+                        Al momento dell'accensione del computer, una serie di operazioni cruciali vengono eseguite in sequenza. 
+                        Questo processo inizia con il programma di bootstrap, noto anche come programma di avvio o boot, il quale 
+                        è predisposto dal produttore dell'hardware e conservato in una specifica memoria chiamata ROM (Read Only Memory), 
+                        caratterizzata dalla sua natura di sola lettura, in quanto non può essere modificata dall'utente.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="img">
+                    <img src="sito/imaggini/boot.jpg.png" alt="">
+                </div>
+                <div class="paragrafi">
+                    <h2>Caricamento del Programma di Boot:</h2>
+                    <p>
+                        Al momento dell'accensione, l'hardware è configurato per avviare il caricamento del programma di boot da un indirizzo specifico. 
+                        Ad esempio, nei processori a 32 bit, la prima istruzione è caricata dall'indirizzo esadecimale OxFFFFFFFO del cosiddetto IPL (Initial Program Loader), 
+                        che assume il controllo della CPU al momento dell'accensione.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="img">
+                    <img src="sito/imaggini/Autodiagnosi.jpg" alt="">
+                </div>
+                <div class="paragrafi">
+                    <h2>Autodiagnosi e Test di Avvio</h2>
+                    <p>
+                        All'accensione del PC, l'hardware è configurato per eseguire il programma di boot. Questo programma prende il 
+                        controllo della CPU e avvia il processo di avvio. Inoltre, ogni componente hardware esegue un'autodiagnostica chiamata
+                        POST (Power On Self Test). Il POST include una serie di test che verificano il corretto funzionamento di ciascun componente.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="img">
+                    <img src="sito/imaggini/Periferiche.jpg" alt="">
+                </div>
+                <div class="paragrafi">
+                    <h2>Controllo delle Periferiche di Input:</h2>
+                    <p>
+                        Dopo il completamento del POST (Power On Self Test) della scheda madre, il processo di avvio del computer prosegue con un fondamentale 
+                        passaggio: il controllo delle periferiche di input, quali la tastiera e il mouse. Questa fase riveste una rilevanza cruciale in quanto 
+                        assicura che le principali modalità di interazione con il computer siano pronte e funzionanti per l'utilizzo dell'utente.
+                        In questa fase, il sistema verifica attentamente la corretta connessione e funzionalità della tastiera e del mouse. 
+                        Una tastiera e un mouse ben funzionanti sono essenziali per consentire all'utente di inserire comandi, testo e interagire con l'interfaccia utente del sistema operativo.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="img">
+                    <img src="sito/imaggini/cari.gif" alt="">
+                </div>
+                <div class="paragrafi">
+                    <h2>Caricamento del Sistema Operativo</h2>
+                    <p>
+                        Dopo il completamento di tutte queste operazioni, il calcolatore è pronto per iniziare a operare. A questo punto, 
+                        una parte essenziale del sistema operativo, il kernel, viene caricata in memoria. Questo nucleo del sistema operativo consente al computer di gestire le sue funzioni di base.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="img">
+                    <img src="sito/imaggini/bios.jpeg" alt="">
+                </div>
+                <div class="paragrafi">
+                    <h2>Programma di Boot e BIOS</h2>
+                    <p>
+                        Tutte le operazioni di avvio vengono eseguite seguendo le istruzioni presenti nel programma di boot. Nei sistemi IBM, questo insieme di routine software è noto come BIOS 
+                        (Basic Input-Output System). Il BIOS funge da firmware, rappresentando un "software stabile" non modificabile dall'utente, a differenza del software installato in seguito.
+                    </p>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="img">
+                    <img src="sito/imaggini/desktop.jpg" alt="">
+                </div>
+                <div class="paragrafi">
+                    <h2>Conclusione</h2>
+                    <p>
+                        L'avvio del computer è un processo complesso e fondamentale che si snoda attraverso una serie di passaggi cruciali. Dal programma di bootstrap al completamento del POST, 
+                        dall'avvio dei componenti al caricamento del sistema operativo, ogni fase contribuisce a garantire il corretto funzionamento del calcolatore.
+                    </p>
+                </div>
+            </section>
+
+
+        </div>
+
+        <div class="nav-pag">
+            <a href="SO.html">1</a>
+            <a href="SO_2.html">2</a>
+            <a href="So_3.html">3</a>
+        </div>
+        
+    </main>
+
+
+
+
+
+    <footer>
+        <div class="contati">
+          <a href="" class="fab fa-facebook-f"></a>
+          <a href="" class="fab fa-twitter"></a>
+          <a href="" class="fab fa-instagram"></a>
+          <a href="" class="fas fa-envelope"></a>
+          <a href="" class="fab fa-discord"></a>
+        </div>
+        <div class="creato">© 2023 <span>Parhar Harshvir Singh</span></div>
+    </footer>    
+</body>
+</html>
