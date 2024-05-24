@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphXperience</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <div id="form-container">
+            <h2>GraphXperience</h2>
+
+            <label for="chartTitle">Titolo del Grafico:</label>
+            <input type="text" id="chartTitle" placeholder="Inserisci il titolo">
+    
+            <label for="chartType">Seleziona il tipo di grafico:</label>
+            <select id="chartType">
+                <option value="bar">Barre</option>
+                <option value="pie">Torta</option>
+                <option value="line">Linee</option>
+                <option value="radar">Radar</option>
+                <option value="doughnut">Ciambella</option>
+            </select>
+            <label for="chartTitle">Cosa Rapresentano:</label>
+            <input type="text" id="valore" placeholder="Esempio: Regioni">
+    
+            <label for="labelsInput">Inserisci le Etichette (separate da virgola):</label>
+            <input type="text" id="labelsInput" placeholder="Esempio: Roma, Milano, Napoli">
+    
+            <label for="dataInput">Inserisci i Dati (separati da virgola):</label>
+            <input type="text" id="dataInput" placeholder="Esempio: 3200000, 2500000, 1800000">
+    
+            <button onclick="updateChart()">Genera Grafico</button>
+        </div>
+
+        <div id="chart-container">
+            <canvas id="myCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+   
+</body>
+</html>
