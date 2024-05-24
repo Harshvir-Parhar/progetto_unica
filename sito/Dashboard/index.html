@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Sofadi+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HTML per il loader -->
+    <div id="loader" class="loader">
+        <span></span>
+      </div>
+
+    <div id="other-content">
+        <header>
+            <div class="mobile" id="mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="sideBarNotifiche">
+                <i class="fas fa-bell"></i>
+            </div>
+            <nav>
+                <div class="alto">
+                    <div class="immagine">
+                        <img src="Immagini/AGRICOLTORE_TREEDOM.png" alt="User Image">
+                    </div>
+                    
+                    <h3 id="Username">Utente</h3>
+                    <div class="contenitore">
+                        <a href="#Dashboard" class="active">
+                            <div><i class="fas fa-chart-line"></i>Dashboard</div>
+                        </a>
+                        <a href="#Personalizza">
+                            <div><i class="fas fa-cogs"></i>Personalizza</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="basso">
+                    <label class="switch">
+                        <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+                        <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+                        <input type="checkbox" class="input">
+                        <span class="slider"></span>
+                      </label>
+                    <a href="#Logout">
+                        <div><i class="fas fa-sign-out-alt"></i>Logout</div>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="dashboard" id="Dashboard">
+            <div class="typewriter">
+                <span id="text"></span>
+            </div>
+            <div class="contenuto_prima_seconda_Sidebar">
+                <div class="primaSeconda">
+                    <div class="primaRiga">
+                        <div class="StatoSerra">
+                            <h2>Stato Serra</h2>
+                            <div class="status">
+                                <p><i class="fas fa-thermometer-half"></i> Temperatura: <span id="temperature">34 °C</span></p>
+                                <p><i class="fas fa-door-closed"></i> Stato: <span id="serra-status">Chiusa</span></p>
+                                <p><i class="fas fa-tint"></i> Irrigazione: <span id="irrigation-status">Disattiva</span></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="container">
+                                <img src="Immagini/meteo/sole.png" alt="">
+                            </div>
+                              
+                          
+                            <div class="card-header">
+                              <span>Meteo Attuale</span>
+                              <span>March 13</span>
+                            </div>
+                          
+                            <span class="temp">23°</span>
+                          
+                            <div class="temp-scale">
+                              <p><i class="fas fa-tint"></i> <span>77%</span></p>
+                              <p><i class="fas fa-wind"></i> <span>16 km/h</span></p>
+                            </div>
+                          </div>
+                        
+            
+                    </div>
+                    <div class="secondaRiga">
+                        <div class="sistemaTemperatura">
+                            <div class="TemperaturaValore">
+                                34°
+                            </div>
+                            
+                            <div class="aumentaDimniusci">
+                                <div class="diminuisciTemp">-</div>
+                                <div class="aumentaTemp">+</div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="PulsantiApriChiudiSerraIrrigazione">
+                            <h2>Pulsanti di Controllo</h2>
+                            <div class="controlloSerra">
+                                <p><i class="fas fa-door-closed"></i> Stato:</p>
+                                <fieldset class="radio">
+                                    <input name="serra-switch" id="serra-on" type="radio">
+                                    <label for="serra-on">ON</label>
+                                    <input name="serra-switch" id="serra-off" type="radio">
+                                    <label for="serra-off">OFF</label>
+                                    <input checked="" name="serra-switch" id="serra-auto" type="radio">
+                                    <label for="serra-auto">AUTO</label>
+                                </fieldset>
+                            </div>
+                            <div class="controlloIrrigazione">
+                                <p><i class="fas fa-tint"></i> Irrigazione:</p>
+                                <fieldset class="radio">
+                                    <input name="irrigation-switch" id="irrigation-on" type="radio">
+                                    <label for="irrigation-on">ON</label>
+                                    <input name="irrigation-switch" id="irrigation-off" type="radio">
+                                    <label for="irrigation-off">OFF</label>
+                                    <input checked="" name="irrigation-switch" id="irrigation-auto" type="radio">
+                                    <label for="irrigation-auto">AUTO</label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="sidebar" id="sidebar">
+                    <div class="titoloSide">
+                        <h2>Notifiche</h2>
+                    </div>
+                    <div class="contenitoreNotifiche">
+                        <div class="notifica">
+                            <h3>Benvenuto nella tua dashboard!</h3>
+                            <p>Questa è la tua dashboard personale. Inizia ad esplorare tutte le funzionalità!</p>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+            </div>
+            
+        </main>
+        
+        <main class="Personalizza" id="Personalizza">
+            <h2>Personalizza</h2>
+        </main>
+
+    </div>
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>

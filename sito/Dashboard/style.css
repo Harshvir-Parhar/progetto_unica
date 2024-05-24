@@ -1,0 +1,971 @@
+body {
+    background-color:#f5f5fa; /*#212121*/
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+}
+/*loder*/
+
+body.loaded #other-content {
+    display: none;
+}
+  
+/* Stile per il loader */
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 25px 75px rgba(0,0,0,0.55);
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1000; 
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background: transparent;
+  border: 1px dashed#444;
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px dashed#444;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radar81 2s linear infinite;
+  border-top: 1px dashed #fff;
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: seagreen;
+  transform-origin: top left;
+  transform: rotate(-55deg);
+  filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
+}
+
+@keyframes radar81 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+header {
+    position: relative;
+}
+
+nav {
+    background-color: #2c3e50; /*#0000*/
+    color: #ecf0f1;
+    width: 14rem;
+    height: 99vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    transition: transform 0.3s ease;
+    top: 3px;
+    left: 2px;
+    overflow-y: auto;
+    border-radius: 1rem;
+}
+
+.mobile {
+    display: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 24px;
+    margin: 1rem;
+    position: absolute;
+    top: .4rem;
+    right: 1rem;
+}
+
+.alto {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.alto .immagine {
+    background-color: #ffffff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.alto .immagine img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contenitore {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contenitore a {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 1rem .5rem;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.contenitore a:hover {
+    background-color: #1d2c3b;
+    border-radius: 0.6rem;
+}
+
+.contenitore a div {
+    color: #ecf0f1;
+}
+
+.contenitore a div i {
+    margin-right: 10px;
+}
+
+.basso {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.basso a {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.basso a:hover {
+    background-color: #1d2c3b;
+    border-radius: 0.6rem;
+}
+
+.basso a div {
+    color: #ecf0f1;
+}
+
+.basso a div i {
+    margin-right: 10px;
+}
+
+/* Main */
+main {
+    margin-left: 15rem;
+}
+
+.contenitore a.active {
+    background-color: #1d2c3b;
+    border-radius: 0.6rem;
+}
+
+.primaRiga {
+    display: flex;
+    margin-top: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 50%;
+}
+
+/* Stile del testo */
+.typewriter {
+    font-size: 24px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    min-height: 40px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*toggle button cambiamento meteo*/
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Temperatura */
+.temperatura {
+    padding: 0 5rem;
+    background: linear-gradient(45deg, #31323f, #324b4c);
+    margin-left: 1rem;
+}
+
+.valore {
+    padding: 5rem;
+    border: .5rem solid #979797;
+    border-radius: 50%;
+}
+
+.pulsanti {
+    display: flex;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+}
+
+.sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+.moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+/* Temperatura */
+.temp {
+    position: absolute;
+    left: 25px;
+    bottom: 12px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    color: rgba(87, 77, 51, 1);
+}
+
+.temp-scale {
+    height: 36px;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+}
+.temp-scale p{
+    display: flex;
+    margin: .3rem;
+    flex-direction: column;
+    font-size:15px;
+    align-items: center;
+}
+.temp-scale p:first-child{
+    border-right: solid 2px  rgb(255, 255, 255);
+    padding-right: 10px;
+
+}
+
+.temp-scale i{
+  color: rgb(28, 28, 28);
+}
+.temp-scale span {
+    margin-top: .5rem;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(87, 77, 51, 0.66);
+}
+
+/* Prima riga -> Stato serra */
+/* Stile generale */
+.StatoSerra {
+    height: 180px;
+    width: 350px;
+    padding: 25px;
+    background: radial-gradient(178.94% 106.41% at 26.42% 106.41%, #2e55aa 0%, rgba(255, 255, 255, 0) 71.88%), #ecb1e5;
+    box-shadow: 10px 15px 62px rgba(0, 0, 0, 0.5);
+    border-radius: 23px;
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Cambia il font */
+}
+
+/* Titolo Stato Serra */
+.StatoSerra h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #fff;
+}
+
+.status {
+    margin-top: 20px;
+}
+
+.status p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.status p i {
+    margin-right: 10px;
+}
+
+.status p span {
+    margin-left: auto; 
+}
+.secondaRiga {
+    margin-top: 1rem;
+    display: flex;
+    height: inherit;
+}
+
+.IrrigazioneSerra {
+    padding: 2rem;
+    background: linear-gradient(45deg, #212121, #555555);
+    border-radius: 1rem;
+}
+
+.irrigazione {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fx-block {
+    margin-left: 1rem;
+}
+
+
+/* Meteo */
+.card {
+    margin-left: 4rem;
+    width: 350px;
+    height: 180px;
+    position: relative;
+    padding: 25px;
+    background: radial-gradient(178.94% 106.41% at 26.42% 106.41%, #FFF7B1 0%, rgba(255, 255, 255, 0) 71.88%), #ff8383;
+    box-shadow: 0px 155px 62px rgba(0, 0, 0, 0.01), 0px 87px 52px rgba(0, 0, 0, 0.05), 0px 39px 39px rgba(0, 0, 0, 0.09), 0px 10px 21px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    cursor: pointer;
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    justify-content: center;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    display: inline;
+    position: absolute;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-header span:first-child {
+    word-break: break-all;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 135%;
+    color: rgba(87, 77, 51, 0.66);
+}
+
+.card-header span:last-child {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 135%;
+    color: rgba(87, 77, 51, 0.33);
+}
+
+/* Sidebar */
+.contenuto_prima_seconda_Sidebar {
+    display: flex;
+}
+
+.primaSeconda {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.contenuto_prima_seconda_Sidebar .sidebar {
+    height: 85vh;
+    margin-top: 1rem;
+    margin-left: .8rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    width: 30rem;
+}
+
+.titoloSide{
+    width:  100%;
+    padding: .5rem 0;
+    background-color: #333; 
+    color: #fff; 
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.titoloSide h2 {
+    margin-left: .8rem;
+}
+.contenitoreNotifiche{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.notifica {
+    padding: 1rem;
+    background-color: #007bff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 1rem; 
+    color: #fff; 
+    width: 90%;
+    margin: .2rem; 
+}
+
+.notifica h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 18px;
+}
+
+.notifica p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.secondaRiga{
+    display: flex;
+    margin-top: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+/* Stile del contenitore */
+.sistemaTemperatura {
+    width: 30vw; 
+    height: 30vw; 
+    max-width: 300px; 
+    max-height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fea2b2, #877eff);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Stile del cerchio per il valore della temperatura */
+.TemperaturaValore {
+    width: 80%; /* Utilizzo di percentuale per adattarsi al contenitore */
+    height: 80%; /* Utilizzo di percentuale per adattarsi al contenitore */
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw; /* Utilizzo di vw per adattarsi alla larghezza dello schermo */
+    color: #ff758c;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Stile per i pulsanti aumenta e diminuisci */
+.aumentaDimniusci {
+    position: absolute;
+    bottom: 2vw; /* Utilizzo di vw per adattarsi alla larghezza dello schermo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aumentaDimniusci .aumentaTemp,
+.aumentaDimniusci .diminuisciTemp {
+    width: 5vw; 
+    height: 5vw; 
+    max-width: 40px; 
+    max-height: 40px;
+    background-color: #fff;
+    color: #ff758c;
+    font-size: 2vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 2vw; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.aumentaDimniusci .aumentaTemp:hover,
+.aumentaDimniusci .diminuisciTemp:hover {
+    background-color: #ff758c;
+    color: #fff;
+}
+
+
+
+/* Stili per il contenitore dei pulsanti */
+.PulsantiApriChiudiSerraIrrigazione {
+    margin-left: 2rem;
+    width: 350px;
+    height: 200px;
+    padding: 25px;
+    background: hsla(183, 62%, 45%, 1);
+    background: linear-gradient(90deg, hsla(183, 62%, 45%, 1) 0%, hsla(41, 96%, 58%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(183, 62%, 45%, 1) 0%, hsla(41, 96%, 58%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(183, 62%, 45%, 1) 0%, hsla(41, 96%, 58%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2CB2BA", endColorstr="#FBB92D", GradientType=1 );    box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.1), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.PulsantiApriChiudiSerraIrrigazione:hover {
+    transform: translateY(-5px);
+}
+
+fieldset {
+    border: 0;
+    margin-left: auto;
+}
+
+.controlloSerra,
+.controlloIrrigazione {
+    display: flex;
+}
+
+/* Stili per il testo e il radio button della serra */
+.controlloSerra p,
+.controlloIrrigazione p {
+    display: flex;
+    align-items: center;
+}
+
+/* Stili per allineare il testo a sinistra */
+.controlloSerra p i,
+.controlloIrrigazione p i {
+    margin-right: 10px;
+}
+
+/* Stili per i radio button */
+.radio input[type="radio"] {
+    display: none;
+}
+
+.radio label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.radio input[type="radio"]:checked + label {
+    background-color: #00bcd4;
+    color: white;
+}
+
+/* Stili aggiuntivi per i radio button su hover */
+.radio label:hover {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+}
+
+
+.sideBarNotifiche {
+    display: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 24px;
+    margin: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media (max-width: 979px) {
+    nav.show-mobile {
+        transform: translateX(0);
+    }
+
+    nav {
+        transition: transform 0.3s ease;
+        transform: translateX(-14rem);
+        z-index: 1;
+    }
+    
+    .mobile{
+        display: block;
+    }
+
+    main {
+        margin-left: 1rem;
+    }
+    .sistemaTemperatura{
+        z-index: 0;
+    }
+    .sideBarNotifiche{
+        top: .4rem;
+        right: 4rem;
+    }
+    
+}
+
+@media (max-width: 1329px) {
+    .sideBarNotifiche{
+        display: block;
+    }
+    .primaSeconda{
+        width: 100%;
+    }
+    .typewriter{
+        font-size: 20px;
+    }
+    .sidebar {
+        position: fixed;
+        transition: right 0.5s ease-in-out;
+        right: -60rem;
+
+    }
+    
+    .sideBarNotifiche {
+        cursor: pointer;
+    }
+    
+    .show-sidebar {
+        right: 1rem;
+    }
+    
+}
+
+@media (max-width: 728px) {
+    .PulsantiApriChiudiSerraIrrigazione{
+        width: 250px;
+        height: unset;
+    }
+    .controlloSerra,.controlloIrrigazione{
+        display: block;
+    }
+    fieldset{
+        font-size: 70%;
+    }
+    .sistemaTemperatura{
+        width: 100%;
+        height: 100%;
+    }
+    .PulsantiApriChiudiSerraIrrigazione h2{
+        font-size: 1.3em;
+    }
+    
+}
+
+@media (max-width: 643px) {
+    .PulsantiApriChiudiSerraIrrigazione{
+        width: 250px;
+        height: unset;
+    }
+    .PulsantiApriChiudiSerraIrrigazione h2{
+        font-size: 20px;
+    }
+    .controlloSerra,.controlloIrrigazione{
+        display: block;
+    }
+    fieldset{
+        font-size: 60%;
+        margin-top: .2rem;
+    }
+    .sistemaTemperatura{
+        width: 60%;
+        height: 75%;
+    }
+    .primaRiga,.secondaRiga{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .card, .PulsantiApriChiudiSerraIrrigazione{
+        margin-top: 2rem;
+    }
+    .card{
+        margin-left: 0;
+    }
+    .secondaRiga{
+        height: 620px;
+    }
+    .controlloSerra,.controlloIrrigazione{
+        display: inline;
+    }
+    .StatoSerra,.card{
+        width: 250px;
+    }
+    .sistemaTemperatura{
+        width: 90%;
+        height: 75%;
+    }
+    .TemperaturaValore{
+        font-size: 15vw;
+    }
+    .aumentaDimniusci .aumentaTemp,
+    .aumentaDimniusci .diminuisciTemp{
+        width: 8vw;
+        height: 8vw;
+        font-size: 8vw;
+    }
+    fieldset{
+        font-size: 90%;
+    }
+    .PulsantiApriChiudiSerraIrrigazione {
+        margin-right: 1.5rem;
+    }
+    #sidebar{
+        width: 90%;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .StatoSerra,.card{
+        width: 200px;
+    }
+    .sistemaTemperatura{
+        width: 90%;
+        height: 75%;
+    }
+    .TemperaturaValore{
+        font-size: 15vw;
+    }
+    .aumentaDimniusci .aumentaTemp,
+    .aumentaDimniusci .diminuisciTemp{
+        width: 8vw;
+        height: 8vw;
+        font-size: 8vw;
+    }
+    fieldset{
+        font-size: 70%;
+    }
+    .PulsantiApriChiudiSerraIrrigazione {
+        width: 200px;
+       
+    }
+    
+}
+
+@media (max-width: 400px){
+    .notifica{
+        width: 85%;
+    }
+}
