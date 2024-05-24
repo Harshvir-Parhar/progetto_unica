@@ -566,7 +566,6 @@ footer .creato span{
 
 }
 
-
 .Progetti h1{
     text-align: center;
     margin: 0.6rem;
@@ -578,12 +577,92 @@ footer .creato span{
 .Progetti h1 span{
     color: yellow;
 }
+
+.progettiContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+.progettiContainer .progetti-box{
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    color: #fff;
+    box-shadow: 0 0 1rem #0ceed8;
+    height: -webkit-fill-available;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+.progetti-box img{
+    width: 100%;
+    transition: .5s ease;
+    background-color: white;
+}
+.progetti-box:hover img{
+    transform: scale(1.1);
+}
+
+.progetti-box .progetti-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0,0,0,.1),rgb(0, 255, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+
+}
+.progetti-box:hover .progetti-layer{
+    transform: translateY(0);
+
+}
+.progetti-layer h4{
+    font-size: 3rem;
+}
+.progetti-layer p{
+    font-size: 1.4rem;
+    margin: .3rem 0 1rem;
+}
+.progetti-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background: white;
+}
+.progetti-layer a i{
+    font-size: 2rem;
+    color: #000;
+}
 @media(max-width:1200px){
     html{
         font-size: 55%;
     }
     .home{
         padding: 1rem,4rem;
+    }
+    .skill-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-left,.skill-right{
+        width: 90%;
+        margin-left: 0;
     }
 }
 
@@ -621,5 +700,7 @@ footer .creato span{
     }
     
 }
+
+
 
 
